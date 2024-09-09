@@ -7,7 +7,7 @@ import NavFuncItems from '@/components/NavFuncItems';
 
 function NavBar() {
     return (
-        <nav className="flex flex-col h-screen">
+        <nav className="flex flex-col sticky top-0 h-screen">
             <section className="flex items-center justify-center h-28 gap-5 bg-black">
                 <Image
                     className='' 
