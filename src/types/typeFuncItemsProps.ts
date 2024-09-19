@@ -1,52 +1,59 @@
 
 import { IconType } from "react-icons";
 import { CgProfile } from "react-icons/cg";
-import { GrHomeRounded } from "react-icons/gr";
+import { TiHome } from "react-icons/ti";
 import { HiPencilAlt } from "react-icons/hi";
 import { HiChatBubbleOvalLeftEllipsis } from "react-icons/hi2";
 import { PiHandbagSimpleFill, PiNetworkSlashFill } from "react-icons/pi";
 import { TbLayoutCardsFilled } from "react-icons/tb";
 
-export type NavFuncItemsProps = {
+export type typeFuncItemsProps = {
     Icon: IconType;
     text: string;
     onClick: () => any;
 }
 
-export const arrayNavItemsProps: NavFuncItemsProps[] = [
+export function SectionScroll(id: string) {
+    const section = document.getElementById(id);
+
+    section?.scrollIntoView({behavior: 'smooth'});
+}
+
+export const arrayNavItemsProps: typeFuncItemsProps[] = [
     {
-        Icon: GrHomeRounded,
+        Icon: TiHome,
         text: "Home",
-        onClick: () => {}
+        onClick: () => SectionScroll('Home')
     },
     {
         Icon: CgProfile,
         text: "About me",
-        onClick: () => {}
+        onClick: () => SectionScroll('About me')
+
     },
     {
         Icon: HiPencilAlt,
         text: "Services",
-        onClick: () => {}
+        onClick: () => SectionScroll('Services')
     },
     {
         Icon: PiHandbagSimpleFill,
         text: "Skills",
-        onClick: () => {}
+        onClick: () => SectionScroll('Skills')
     },
     {
         Icon: TbLayoutCardsFilled,
         text: "Portfolio",
-        onClick: () => {}
+        onClick: () => SectionScroll('Portfolio')
     },
     {
         Icon: HiChatBubbleOvalLeftEllipsis,
         text: "Contacts",
-        onClick: () => {}
+        onClick: () => SectionScroll('Contacts')
     }, 
     {
         Icon: PiNetworkSlashFill,
         text: "Networks",
-        onClick: () => {}
+        onClick: () => SectionScroll('Networks')
     }
 ];

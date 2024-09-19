@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import Logo from "@/assets/img/unnamed.png";
-import { arrayNavItemsProps } from "@/types/NavFuncItemsProps";
 import NavFuncItems from '@/components/NavFuncItems';
 import HandleScroll from '@/utils/handleScroll';
+import { arrayNavItemsProps } from "@/types/typeFuncItemsProps";
 
 function NavBar() {
     const activeSection = HandleScroll();

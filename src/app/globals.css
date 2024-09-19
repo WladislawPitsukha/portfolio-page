@@ -25,3 +25,15 @@ body {
     text-wrap: balance;
   }
 }
+
+.navSection:hover {
+  background-color: white;
+}
+
+.navSection:hover svg {
+  color: white;
+}
+
+.navSection:hover h6 {
+  font-weight: bold;
+}
