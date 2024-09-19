@@ -26,7 +26,7 @@ export const arrayNavItemsProps: NavFuncItemsProps[] = [
     },
     {
         Icon: HiPencilAlt,
-        text: "Service",
+        text: "Services",
         onClick: () => {}
     },
     {
@@ -41,7 +41,7 @@ export const arrayNavItemsProps: NavFuncItemsProps[] = [
     },
     {
         Icon: HiChatBubbleOvalLeftEllipsis,
-        text: "Contact",
+        text: "Contacts",
         onClick: () => {}
     }, 
     {

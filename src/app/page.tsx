@@ -3,6 +3,7 @@ import AboutMeSect from "@/components/aboutMe";
 import ContactSect from "@/components/contact";
 import HomeSect from "@/components/home";
 import NavBar from "@/components/navBar";
+import Networks from "@/components/networks";
 import PortfolioSect from "@/components/portyfolio";
 import ServicesSect from "@/components/services";
 import SkillsSect from "@/components/skills";
@@ -18,6 +19,7 @@ export default function Home() {
         <SkillsSect />
         <PortfolioSect />
         <ContactSect />
+        <Networks />
       </main>
     </div>
   );

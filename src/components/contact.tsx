@@ -4,7 +4,7 @@ import ContactForm from "./contactForm";
 function ContactSect() {
     const BlockInfo: React.FC<BlockInfo> = ({index, Icon, title, text, link}) => {
         return(
-            <div key={index} className="flex flex-col items-center justify-between gap-5 p-5 bg-gray-800 rounded-md">
+            <div key={index} className="flex flex-col items-center justify-between gap-5 p-5 bg-gray-800 rounded-md w-96">
                 <Icon 
                     className="text-blue-700 w-16 h-16"
                 />
@@ -22,8 +22,8 @@ function ContactSect() {
     }
 
     return (
-        <section className="flex flex-col p-10 rounded-lg shadow-md gap-10">
-            <article className="flex gap-5">
+        <section id="Contacts" className="flex flex-col p-10 rounded-lg shadow-md gap-10">
+            <article className="flex gap-5 justify-between">
                 {ArrayBlocksInfo.map(obj => (
                     <BlockInfo 
                         index={obj.index}

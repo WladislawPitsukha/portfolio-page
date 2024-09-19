@@ -17,7 +17,7 @@ export const DownloadCV = () => {
 
 function HomeSect() {
     return (
-        <section className="flex bg-black w-100 py-40 px-12">
+        <section id='Home' className="flex bg-black w-100 py-40 px-12">
             <article className="flex flex-col items-start justify-between gap-10 w-1/2">
                 <div className="flex flex-col gap-4">
                     <h1 className="text-white text-4xl uppercase">

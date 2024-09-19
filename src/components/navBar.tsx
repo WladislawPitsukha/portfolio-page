@@ -1,11 +1,14 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Logo from "@/assets/img/unnamed.png";
 import { arrayNavItemsProps } from "@/types/NavFuncItemsProps";
 import NavFuncItems from '@/components/NavFuncItems';
+import HandleScroll from '@/utils/handleScroll';
 
 function NavBar() {
+    const activeSection = HandleScroll();
+
     return (
         <nav className="flex flex-col sticky top-0 h-screen">
             <section className="flex items-center justify-center h-28 gap-5 bg-black">
@@ -27,6 +30,7 @@ function NavBar() {
                         Icon={item.Icon}
                         text={item.text}
                         onClick={item.onClick}
+                        isActive={activeSection === item.text}
                     />
                 ))}
             </section>

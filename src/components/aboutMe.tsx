@@ -1,15 +1,16 @@
 import { GoGoal } from "react-icons/go";
 import { CiCoffeeCup } from "react-icons/ci";
+import TitleComponent from "./TitleComponent";
 
 function AboutMeSect() {
     return(
-        <section className="flex relative items-start justify-between flex-col p-10">
-            <h3 className="font-bold uppercase text-blue-700 text-[24px]">
-                About me
-            </h3>
-            <h1 className="text-white text-[48px] mt-3 mb-10">
-                Crafting stories through design, developing and <br /> innovation 
-            </h1>
+        <section id="About me" className="flex relative items-start justify-between flex-col p-10">
+            <TitleComponent 
+                title="About me"
+                description="Crafting stories through design, developing and  
+                innovation"
+                position="start"
+            />
             <article className="flex flex-col relative items-start gap-5 mt-10">
                 <div className="absolute top-0 left-10 w-16 h-16 bg-blue-500 rounded-full opacity-70"></div>
                 <CiCoffeeCup 

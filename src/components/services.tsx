@@ -1,29 +1,5 @@
 import { ArrayServices } from "@/types/typeArrayServices";
-
-const ServicesSect = () => {
-    return(
-        <section className="flex flex-col justify-between items-center gap-20 p-10">
-            <article className="flex flex-col items-center">
-                <h4 className="font-bold uppercase text-blue-700 text-[24px]">
-                    My services
-                </h4>
-                <h1 className="font-bold text-white text-[64px] text-center">
-                    Bringing your vision to life with 
-                    <br />
-                    precision and passion
-                </h1>
-            </article>
-            <article className="flex items-center justify-around gap-10">
-                {ArrayServices.map((obj, index) =>(
-                    <ItemServices key={index} Icon={obj.Icon} title={obj.title} text={obj.text} />
-                ))}
-            </article>
-        </section>
-    )
-}
-
-export default ServicesSect;
-
+import TitleComponent from "./TitleComponent";
 
 export const ItemServices: React.FC<ArrayServices> = ({Icon, title, text}) => {
     return(
@@ -44,3 +20,22 @@ export const ItemServices: React.FC<ArrayServices> = ({Icon, title, text}) => {
         </div>
     )
 }
+
+const ServicesSect = () => {
+    return(
+        <section id="Services" className="flex flex-col justify-between items-center gap-20 p-10">
+            <TitleComponent 
+                title="My services"
+                description="Bringing your vision to life with precision and passion"
+                position="center"
+            />
+            <article className="flex items-center justify-around gap-10">
+                {ArrayServices.map((obj, index) =>(
+                    <ItemServices key={index} Icon={obj.Icon} title={obj.title} text={obj.text} />
+                ))}
+            </article>
+        </section>
+    )
+}
+
+export default ServicesSect;

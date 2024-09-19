@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { DownloadCV } from "./home";
+import TitleComponent from "./TitleComponent";
 
 const ButtonItems = [
     { button: "Education" },
@@ -13,14 +14,13 @@ const SkillsSect = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <section className="flex flex-col items-center justify-center gap-20 p-10 mt-10">
+        <section id="Skills" className="flex flex-col items-center justify-center gap-20 p-10 mt-10">
             <article className="flex flex-col items-center gap-10">
-                <h4 className="font-bold uppercase text-blue-700 text-[24px]">
-                    My Skills
-                </h4>
-                <h1 className="font-bold text-white text-[48px] text-center">
-                    Crafting Stories through Design, Developing <br /> and Imagination
-                </h1>
+                <TitleComponent 
+                    title="My Skills"
+                    description="Crafting Stories through Design, Developing and Imagination"
+                    position="center"
+                />
                 <div className="flex justify-between items-center gap-10">
                     <DownloadCV />
                     {ButtonItems.map((obj, index) => ( 
