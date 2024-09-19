@@ -14,8 +14,9 @@
 - create blocks
 - create links
 - animation for appering
-- [ ] to add CV 
+- [ x ] to add CV 
 1) where to add:
     - "About";
     - "Services";
 - [ ] to make video presentation
+- [ ] to add CV

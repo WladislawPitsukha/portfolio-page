@@ -6,12 +6,16 @@ import { IoMdDownload } from "react-icons/io";
 
 export const DownloadCV = () => {
     return(
-        <div className="flex items-center justify-center rounded-md gap-4 bg-blue-700 px-8 py-5 shadow-lg">
+        <a 
+            href=''
+            className="flex items-center justify-center rounded-md gap-4 bg-blue-700 px-8 py-5 shadow-lg cursor-pointer hover:bg-white"
+            download
+        >
             <h4 className="font-bold text-black">
                 Download CV
             </h4>
             <IoMdDownload className="text-black" />
-        </div>
+        </a>
     )
 }
 
