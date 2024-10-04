@@ -47,13 +47,13 @@ export const arrayNavItemsProps: typeFuncItemsProps[] = [
         onClick: () => SectionScroll('Portfolio')
     },
     {
-        Icon: HiChatBubbleOvalLeftEllipsis,
-        text: "Contacts",
-        onClick: () => SectionScroll('Contacts')
-    }, 
-    {
         Icon: PiNetworkSlashFill,
         text: "Networks",
         onClick: () => SectionScroll('Networks')
+    },
+    {
+        Icon: HiChatBubbleOvalLeftEllipsis,
+        text: "Contacts",
+        onClick: () => SectionScroll('Contacts')
     }
 ];

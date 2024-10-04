@@ -18,8 +18,8 @@ export default function Home() {
         <ServicesSect />
         <SkillsSect />
         <PortfolioSect />
-        <ContactSect />
         <Networks />
+        <ContactSect />
       </main>
     </div>
   );

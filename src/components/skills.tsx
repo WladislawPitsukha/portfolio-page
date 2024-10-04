@@ -3,12 +3,8 @@
 import { useState } from "react";
 import { DownloadCV } from "./home";
 import TitleComponent from "./TitleComponent";
-
-const ButtonItems = [
-    { button: "Education" },
-    { button: "Biography" },
-    { button: "Experience" }
-];
+import { ButtonItems, educateBlocks } from "@/types/typeSkills";
+import "../style/animation.css"
 
 const SkillsSect = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -38,17 +34,36 @@ const SkillsSect = () => {
                     ))}
                 </div>
             </article>
-            <article className="relative w-full h-96 overflow-hidden">
-                {ButtonItems.map((_, index) => (
+            <article className="flex justify-between relative w-full h-96 overflow-hidden">
+                {educateBlocks.map((obj, index) => (
                     <div
                         key={index}
-                        className={`absolute top-0 left-0 w-full h-full transition-transform duration-700 ease-in-out ${
-                            activeIndex === index ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0'
-                        }`}
+                        className="flex flex-col items-start justify-between bg-gray-700 p-5 rounded-md shadow-lg w-80"
                     >
-                        <h2 className="text-3xl font-extrabold text-white">
-                            Content for {ButtonItems[index].button}
-                        </h2>
+                        <h4 className="font-bold text-white">
+                            {obj.title}
+                        </h4>
+                        <div className="flex flex-col justify-around gap-6 ">
+                            {[obj.time, obj.specialization, obj.description].map((text, index) => (
+                                <p 
+                                    key={index}
+                                    className="text-gray-300"
+                                >
+                                    {text}
+                                </p>
+                            ))}
+                        </div>
+                        <div className="flex items-center flex-col justify-between w-full gap-1">
+                            <div className="w-full bg-gray-300 rounded-full h-4">
+                                <div
+                                    className="bg-blue-700 h-4 rounded-full"
+                                    style={{ width: `${obj.percent}%` }}
+                                ></div>
+                            </div>
+                            <p className="text-white">
+                                {`${obj.percent}%`}
+                            </p>
+                        </div>
                     </div>
                 ))}
             </article>

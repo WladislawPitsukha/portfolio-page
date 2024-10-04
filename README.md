@@ -4,13 +4,11 @@
 
 - [ x ] To add animation for "NavBar" while scroll page
 - [ x ] To add and create photo's block for "Home"
-- [ ] To add and create photo's block for "About" 
-- [ ] to makes articles for section "My SKills":
+- [ x ] to makes articles for section "My SKills":
 - Education;
 - Biography;
 - Experience;
-- [ ] to add any projects (finish section "Portfolio")
-- [ ] To make Blocks for "Networks:
+- [ x ] To make Blocks for "Networks:
 - create blocks
 - create links
 - animation for appering
@@ -20,3 +18,5 @@
     - "Services";
 - [ ] to make video presentation
 - [ ] to add CV
+- [ ] To add and create photo's block for "About" 
+- [ ] to add any projects (finish section "Portfolio")
