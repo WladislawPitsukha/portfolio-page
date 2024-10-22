@@ -26,10 +26,6 @@ body {
   }
 }
 
-.navSection:hover {
-  background-color: white;
-}
-
 .navSection:hover svg {
   color: white;
 }
