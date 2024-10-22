@@ -18,7 +18,10 @@ export const ButtonItems: ButtonProps[] = [
     { button: "Experience" }
 ];
 
-export const educateBlocks: BlockProps[] = [
+let nowTime = new Date();
+const curDate = `${(nowTime.getMonth() + 1).toString().padStart(2, '0')}-${nowTime.getFullYear()}`
+
+export const educateBlock: BlockProps[] = [
     {
         title: "Plekhanov University of Economics",
         time: "09.2019-07.2024",
@@ -39,5 +42,29 @@ export const educateBlocks: BlockProps[] = [
         specialization: "Frontend specialist",
         description: "An advanced course aimed at enhancing expertise in frontend technologies, covering modern frameworks and best practices in the industry.",
         percent: calculateYearPercentage("10.2022-05.2023")
+    }
+]
+
+export const experienceBlock: BlockProps[] = [
+    {
+        title: "Upwork",
+        time: "01.2023-present time",
+        specialization: "",
+        description: "Developing modern web applications using React, Next.js, and TypeScript. Creating responsive and interactive user interfaces, optimizing performance, and ensuring high code quality.",
+        percent: calculateYearPercentage(`01.2023-${curDate}`)
+    }, 
+    {
+        title: "Top Soft",
+        time: "11.2022-07.2023",
+        specialization: "Frontend Developer",
+        description: "Worked on the development and maintenance of web applications, using modern frontend development technologies. Participated in performance optimization and user interface improvements.",
+        percent: calculateYearPercentage("11.2022-07.2023")
+    },
+    {
+        title: "Praca.pl",
+        time: "04.2024-present time",
+        specialization: "Frontend Developer",
+        description: "Developing new features for the job search web platform. Focusing on creating a responsive and accessible interface, as well as optimizing application performance.",
+        percent: calculateYearPercentage(`04.2024-${curDate}`)
     }
 ]
