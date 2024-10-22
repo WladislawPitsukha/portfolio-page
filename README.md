@@ -16,8 +16,8 @@
 - [ ] to add CV
 - [ ] To add and create photo's block for "About" 
 - [ ] to add any projects (finish section "Portfolio")
-- [ ] to finish animations for section "My SKills"
-- [ ] to makes articles for section "My SKills":
+- [x ] to finish animations for section "My SKills"
+- [x ] to makes articles for section "My SKills":
 - [ x ] Education;
-- [ ] Biography;
-- [ ] Experience;
+- [x ] Biography;
+- [x ] Experience;
