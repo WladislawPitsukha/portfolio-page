@@ -1,0 +1,24 @@
+.skillTitle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.skillTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+.skillCard:hover .skillTitle {
+    transform: translateY(-2px);
+    color: #3b82f6;
+}
+.skillCard:hover .skillTitle::after {
+    width: 100%;
+    background-color: #60a5fa;
+}
