@@ -33,3 +33,40 @@ body {
 .navSection:hover h6 {
   font-weight: bold;
 }
+
+.nav-item-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+.nav-item-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.nav-item-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.nav-item-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+/* Hover Effects */
+.nav-hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+.nav-hover-effect::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #2563eb;
+  transition: width 300ms ease;
+}
+.nav-hover-effect:hover::after {
+  width: 100%;
+}

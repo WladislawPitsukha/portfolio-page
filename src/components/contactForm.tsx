@@ -1,4 +1,4 @@
-function ContactForm() {
+export default function ContactForm() {
     return (
         <form className="space-y-4">
             <div className="flex gap-20">
@@ -92,5 +92,3 @@ function ContactForm() {
         </form>
     );
 }
-
-export default ContactForm;

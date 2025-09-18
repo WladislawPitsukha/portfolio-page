@@ -45,4 +45,78 @@
   to {
     width: 100%;
   }
-}/*# sourceMappingURL=animation.css.map */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+.animate-slideIn {
+    animation: slideIn 1s ease-out;
+}
+
+.service-card-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.service-card-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms ease-out;
+}
+.service-card-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-card-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms ease-in;
+}
+
+.skills-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: skillsFadeIn 0.6s ease-out forwards;
+}
+@keyframes skillsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.skills-button-hover {
+    transition: all 0.3s ease;
+}
+.skills-button-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.skills-section-transition {
+    transition: all 0.5s ease-in-out;
+}
+.skills-section-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.skills-section-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}

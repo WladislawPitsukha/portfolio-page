@@ -1,4 +1,4 @@
-function calculateYearPercentage(period: string): number {
+export default function calculateYearPercentage(period: string): number {
     const [start, end] = period.split("-");
     const [startMonth, startYear] = start.split(".").map(Number);
     const [endMonth, endYear] = end.split(".").map(Number);
@@ -12,4 +12,3 @@ function calculateYearPercentage(period: string): number {
     
     return Math.round(percentage);
 }
-export default calculateYearPercentage;

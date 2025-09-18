@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const HandleScroll = () => {
+export function HandleScroll() {
     const [activeSection, setActiveSection] = useState<string>("Home");
 
     useEffect(() => {
@@ -22,5 +22,3 @@ const HandleScroll = () => {
 
     return activeSection;
 };
-
-export default HandleScroll;

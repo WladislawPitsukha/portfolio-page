@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      wordSpacing: {
+        'wide': '10px',
+      },
     },
   },
   plugins: [],

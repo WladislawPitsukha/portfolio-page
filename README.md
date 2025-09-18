@@ -1,23 +1,76 @@
 # portfolio-page
 
-#### To finish task for the ending project:
+A modern, responsive portfolio website built with Next.js, TypeScript, and Tailwind CSS.
 
-- [ x ] To add animation for "NavBar" while scroll page
-- [ x ] To add and create photo's block for "Home"
-- [ x ] To make Blocks for "Networks:
-- create blocks
-- create links
-- animation for appering
-- [ x ] to add CV 
-1) where to add:
-    - "About";
-    - "Services";
-- [ ] to make video presentation
-- [ ] to add CV
-- [ ] To add and create photo's block for "About" 
-- [ ] to add any projects (finish section "Portfolio")
-- [x ] to finish animations for section "My SKills"
-- [x ] to makes articles for section "My SKills":
-- [ x ] Education;
-- [x ] Biography;
-- [x ] Experience;
+***
+
+## Features
+
+- Responsive design that works on all devices
+- Dark/Light mode support
+- Smooth scrolling navigation
+- Interactive UI components
+- Contact form
+- Skills and experience showcase
+- Portfolio gallery
+- Social media integration
+
+***
+
+## Tech Stack
+
+- **Framework:** Next.js 14
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Icons:** React Icons
+- **Animations:** Custom CSS animations
+- **State Management:** React Hooks
+
+***
+
+## Project Structure
+
+portfolio-page/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── assets/
+│   ├── styles/
+│   ├── types/
+│   └── utils/
+├── public/
+└── ...configuration files
+
+***
+
+## Key Components
+
+- **Navigation Bar:** Responsive sidebar navigation with smooth scrolling
+- **Home Section:** Introduction and quick links
+- **About Section:** Personal and professional information
+- **Services Section:** Showcase of offered services
+- **Skills Section:** Interactive display of technical skills
+- **Portfolio Section:** Gallery of projects
+- **Networks Section:** Social media integration
+- **Contact Section:** Contact form with service selection
+
+***
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies:
+
+- bash
+- npm install
+
+3. Run the development server:
+
+- bash
+- npm run dev
+
+Open [the page](http://localhost:3000) in your browser
+
+## Contact
+
+For any inquiries, please reach out on [email](pitsukhavladislav@gmail.com)

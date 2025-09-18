@@ -1,8 +1,17 @@
-import { ArrayBlocksInfo, BlockInfo } from "@/types/typeBlockInfo";
-import ContactForm from "./contactForm";
+//TODO: Refactor this file like networks.tsx
+//TODO: add new style with animations
+//TODO: change style of contact form
 
-function ContactSect() {
-    const BlockInfo: React.FC<BlockInfo> = ({index, Icon, title, text, link}) => {
+
+import { arrayBlocksInfo } from "@/constants/arrBlockInfo";
+import ContactForm from "./contactForm";
+import { BlockInfoProps } from "@/types/typeBlockInfo";
+
+export default function ContactSect() {
+    const BlockInfo: React.FC<BlockInfoProps> = ({index, icon, main}) => {
+        const { title, text, link } = main;
+        const Icon = icon;
+
         return(
             <div key={index} className="flex flex-col items-center justify-between gap-5 p-5 bg-gray-800 rounded-md w-96">
                 <Icon 
@@ -22,15 +31,13 @@ function ContactSect() {
     }
 
     return (
-        <section id="Contacts" className="flex flex-col p-10 rounded-lg shadow-md gap-10">
+        <section id="Contacts" className="flex flex-col p-10 h-screen w-auto rounded-lg shadow-md gap-10">
             <article className="flex gap-5 justify-between">
-                {ArrayBlocksInfo.map(obj => (
+                {arrayBlocksInfo.map((obj, index) => (
                     <BlockInfo 
                         index={obj.index}
-                        Icon={obj.Icon}
-                        title={obj.title}
-                        text={obj.text}
-                        link={obj.link}
+                        icon={obj.icon}
+                        main={obj.main}
                     />
                 ))}
             </article>
@@ -38,5 +45,3 @@ function ContactSect() {
         </section>
     );
 }
-
-export default ContactSect;
