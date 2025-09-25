@@ -12,6 +12,9 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+  .navSection:hover svg {
+    color: var(--foreground);
+  }
 }
 
 body {
@@ -26,33 +29,29 @@ body {
   }
 }
 
-.navSection:hover svg {
-  color: white;
-}
-
-.navSection:hover h6 {
-  font-weight: bold;
-}
-
 .nav-item-enter {
   opacity: 0;
   transform: translateX(-20px);
+  will-change: transform, opacity;
 }
 .nav-item-enter-active {
   opacity: 1;
   transform: translateX(0);
   transition: opacity 300ms, transform 300ms;
+  will-change: transform, opacity;
 }
 .nav-item-exit {
   opacity: 1;
   transform: translateX(0);
+  will-change: transform, opacity;
 }
 .nav-item-exit-active {
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 300ms, transform 300ms;
+  will-change: transform, opacity;
 }
-/* Hover Effects */
+
 .nav-hover-effect {
   position: relative;
   overflow: hidden;
@@ -69,4 +68,174 @@ body {
 }
 .nav-hover-effect:hover::after {
   width: 100%;
+}
+
+.skillTitle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.skillTitle::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3b82f6;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+.skillCard:hover .skillTitle {
+    transform: translateY(-2px);
+    color: #3b82f6;
+}
+.skillCard:hover .skillTitle::after {
+    width: 100%;
+    background-color: #60a5fa;
+}
+
+.articleCard {
+  transition: width 0.3s ease-in-out, height 0.4s ease-in, transform 0.3s ease;
+}
+.articleCard img {
+  display: none;
+  opacity: 0;
+  width: 300px;
+  height: 350px;
+  transition: opacity 0.5s ease;
+}
+
+.articleCard:hover {
+  width: 300px;
+  height: 350px;
+  cursor: pointer;
+}
+.articleCard:hover svg {
+  display: none;
+}
+.articleCard:hover img {
+  display: block;
+  opacity: 1;
+}
+
+.progress-bar-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 0.5rem;
+  height: 1rem;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background-color: #2b6cb0;
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: width 1s ease-in-out;
+  animation: fillAnimation 2s ease-in-out forwards;
+}
+
+@keyframes fillAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-fadeIn {
+    animation: fadeIn 1s ease-in;
+}
+.animate-slideIn {
+    animation: slideIn 1s ease-out;
+}
+
+.service-card-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+.service-card-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms, transform 300ms ease-out;
+}
+.service-card-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+.service-card-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 300ms, transform 300ms ease-in;
+}
+
+.skills-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: skillsFadeIn 0.6s ease-out forwards;
+}
+@keyframes skillsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.skills-button-hover {
+    transition: all 0.3s ease;
+}
+.skills-button-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+.skills-section-transition {
+    transition: all 0.5s ease-in-out;
+}
+.skills-section-enter {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.skills-section-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+::-webkit-scrollbar {
+    width: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2b6cb0;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2b6cb0;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2b6cb0 #000000;
 }

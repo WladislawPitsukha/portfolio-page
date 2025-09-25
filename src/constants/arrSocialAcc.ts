@@ -1,39 +1,38 @@
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaFacebookMessenger  } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
-import { FaTelegram, FaFacebook } from "react-icons/fa6";
-import InstWork from '../assets/pic/inst_work.jpg'
+import { FaTelegram, FaFacebook, FaGithub } from "react-icons/fa6";
 
 import { SocialAccProps } from "@/types/typeSocialAcc";
 
 export const ArraySocialAcc: SocialAccProps[] = [
     {
-        icon: FaInstagram,
-        img: InstWork,
-        title: "@Me"
-    },
-    {
-        icon: FaInstagram,
-        img: InstWork,
-        title: "@Work"
-    },
-    {
         icon: FaTelegram,
-        img: InstWork,
-        title: "Telegram"
+        title: "Telegram",
+        link: "https://t.me/merifri_wlad",
     },
     {
         icon: FaFacebook,
-        img: InstWork,
-        title: "Facebook"
+        title: "Facebook",
+        link: "https://www.facebook.com/profile.php?id=61581269135066",
+    },
+    {
+        icon: FaFacebookMessenger,
+        title: "Messenger",
+        link: "https://www.facebook.com/profile.php?id=61581269135066",
     },
     {
         icon: SlSocialVkontakte,
-        img: InstWork,
-        title: "Vkontacte"
+        title: "Vkontacte",
+        link: "https://vk.com/merifri.wlad",
     },
     {
         icon: FaLinkedinIn,
-        img: InstWork,
-        title: "LinkedIn"
+        title: "LinkedIn",
+        link: "https://www.linkedin.com/in/wladislaw-pitsukha-17050723a/",
+    },
+    {
+        icon: FaGithub,
+        title: "GitHub",
+        link: "https://github.com/WladislawPitsukha",
     }
 ]

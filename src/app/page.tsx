@@ -1,4 +1,3 @@
-import "../style/scroll.css"
 import AboutMeSect from "@/components/aboutMe";
 import ContactSect from "@/components/contact";
 import HomeSect from "@/components/home";

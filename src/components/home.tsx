@@ -1,6 +1,5 @@
 "use client"
 
-import '@/style/scroll.css'
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { IoMdDownload } from "react-icons/io";
 

@@ -1,5 +1,4 @@
 import { BlockCompProps } from "@/types/typeSkills";
-import "../style/aniBlock.css";
 import Link from "next/link";
 
 export default function ArtBlockSkill({array}: {array: BlockCompProps[]}) {

@@ -1,42 +1,42 @@
-//TODO: Refactor this file like networks.tsx
-//TODO: add new style with animations
-//TODO: delete unused code
-//TODO: delete links useless social networks
-//TODO: stay & add more working social networks
-//TODO: change the design of the cards
-
-import "@/app/globals.css"
 import TitleComponent from "./TitleComponent";
-import '../style/animation.css'
-import Image from "next/image";
 import { SocialAccProps } from "@/types/typeSocialAcc";
 import { ArraySocialAcc } from "@/constants/arrSocialAcc";
 
-export const GridBlockItem: React.FC<SocialAccProps> = ({ icon, img, title }) => {
+export const SocialBlock: React.FC<SocialAccProps> = ({ icon, link, title }) => {
     const Icon = icon;
 
     return (
-        <article className="articleCard flex flex-col justify-between rounded-md outline outline-4 outline-gray-600 items-center gap-5 p-5 w-40 h-40">
-            <Icon className="text-blue-700 w-16 h-16" />
-            <Image 
-                src={img}
-                alt="screenshort"
-            />
-            <h5 className="uppercase font-bold text-white word-spacing-wide">
+        <a 
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative flex flex-col justify-center items-center p-6 
+                bg-gray-800 rounded-lg transform transition-all duration-300 
+                hover:scale-105 hover:bg-gray-700 w-48 h-48"
+        >
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 
+                rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-300" />
+            <Icon className="text-blue-500 w-16 h-16 mb-4 transform transition-all duration-300 
+                group-hover:scale-110 group-hover:text-blue-400" />
+            <h5 className="text-white font-bold uppercase tracking-wider text-center 
+                transition-all duration-300 group-hover:text-blue-400">
                 {title}
             </h5>
-        </article>
+        </a>
     );
 }
 
-export const DivItem = ({i, j}: {i: number, j: number}) => {
+export const SocialGrid = () => {
     return(
-        <div className="flex items-center justify-around">
-            {ArraySocialAcc.slice(i, j).map((item, index) => (
-                <GridBlockItem
-                    key={index}
-                    {...item}
-                />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+            {ArraySocialAcc.filter(item => item.link).map((item, index) => (
+                <div 
+                    key={index} 
+                    className="animate-fadeIn" 
+                    style={{ animationDelay: `${index * 0.2}s` }}
+                >
+                    <SocialBlock {...item} />
+                </div>
             ))}
         </div>
     )
@@ -44,22 +44,18 @@ export const DivItem = ({i, j}: {i: number, j: number}) => {
 
 export default function Networks() {
     return(
-        <section id="Networks" className="flex flex-col justify-between h-screen w-auto p-10 gap-20">
-            <TitleComponent 
-                title="My social networks"
-                description="Contact me on social media: LinkedIn, Instagram, Facebook, Telegram, and VKontakte"
-                position="start"
-            />
-            <article className="flex flex-col justify-around gap-20 w-auto">
-                <DivItem 
-                    i={0}
-                    j={3}
+        <section 
+            id="Networks" 
+            className="flex flex-col items-center justify-center h-screen w-full p-10 gap-16"
+        >
+            <div className="animate-fadeIn">
+                <TitleComponent 
+                    title="My social networks"
+                    description="Connect with me across various platforms"
+                    position="center"
                 />
-                <DivItem 
-                    i={3}
-                    j={6}
-                />
-            </article>
+            </div>
+            <SocialGrid />
         </section>
     )
 }

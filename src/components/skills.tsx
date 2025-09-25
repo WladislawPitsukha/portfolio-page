@@ -2,7 +2,6 @@
 
 import { DownloadCV } from "./home";
 import TitleComponent from "./TitleComponent";
-import "../style/animation.css"
 import ArtBlockSkill from "./artBlockSkill";
 import ArtBiography from "./artBiography";
 

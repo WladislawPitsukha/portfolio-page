@@ -1,5 +1,3 @@
-import "@/app/globals.css"
-
 import { FuncItemsProps } from "@/types/typeFuncItems";
 
 export default function NavFuncItems({ icon, text, onClick, isActive }: FuncItemsProps & {isActive: boolean}) {
