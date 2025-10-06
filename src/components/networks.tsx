@@ -12,7 +12,7 @@ export const SocialBlock: React.FC<SocialAccProps> = ({ icon, link, title }) => 
             rel="noopener noreferrer"
             className="group relative flex flex-col justify-center items-center p-6 
                 bg-gray-800 rounded-lg transform transition-all duration-300 
-                hover:scale-105 hover:bg-gray-700 w-48 h-48"
+                hover:scale-105 hover:bg-gray-700 w-48 h-48 social-block-fade-in"
         >
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-blue-400 
                 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-300" />
@@ -32,7 +32,7 @@ export const SocialGrid = () => {
             {ArraySocialAcc.filter(item => item.link).map((item, index) => (
                 <div 
                     key={index} 
-                    className="animate-fadeIn" 
+                    className="social-block-fade-in" 
                     style={{ animationDelay: `${index * 0.2}s` }}
                 >
                     <SocialBlock {...item} />

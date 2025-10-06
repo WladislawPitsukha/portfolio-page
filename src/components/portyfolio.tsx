@@ -44,8 +44,11 @@ export default function PortSect() {
                 {portfolioItems.map((item, index) => (
                     <div 
                         key={item.id}
-                        className="animate-fadeIn"
-                        style={{ animationDelay: `${index * 0.2}s` }}
+                        className="portfolio-fade-in"
+                        style={{ 
+                            animationDelay: `${index * 0.2}s`,
+                            animationFillMode: 'both'
+                        }}
                     >
                         <PortfolioCard {...item} />
                     </div>

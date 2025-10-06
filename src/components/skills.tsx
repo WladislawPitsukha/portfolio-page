@@ -51,26 +51,32 @@ export default function SkillsSect() {
         <section 
             id="Skills" 
             className={`flex flex-col items-center justify-center min-h-screen w-full gap-20 p-10 mt-10 
-                transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+                skills-section-fade ${isVisible ? 'skills-section-visible' : ''}`}
         >
-            <article className="flex flex-col items-center gap-10 animate-fadeIn">
+            <article 
+                className={`flex flex-col items-center gap-10 transition-all duration-500 delay-300
+                    ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+            >
                 <TitleComponent 
                     title="My Skills"
                     description="Crafting Stories through Design, Developing and Imagination"
                     position="center"
                 />
                 <div className="flex justify-between items-center gap-10 flex-wrap">
-                    <div className="transform hover:scale-105 transition-transform duration-300">
+                    <div className={`transform transition-all duration-300 delay-500
+                        ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                         <DownloadCV cvUrl="../doc/Resume_3 (1).pdf" />
                     </div>
                     {arraySectItems.map((obj, index) => ( 
                         <div
                             key={index}
                             className={`flex items-center justify-center rounded-md gap-4 px-8 py-5 shadow-lg cursor-pointer
-                                transform transition-all h-auto duration-300 hover:scale-105 
+                                transform transition-all duration-300 hover:scale-105 
+                                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}
                                 ${activeIndex === index 
                                     ? 'bg-blue-700 shadow-blue-500/50' 
                                     : 'bg-gray-500 hover:bg-blue-700'}`}
+                            style={{ transitionDelay: `${index * 100 + 800}ms` }}
                             onClick={() => {
                                 setActiveIndex(index);
                                 setActiveArticle(obj.button);
@@ -83,7 +89,8 @@ export default function SkillsSect() {
                     ))}
                 </div>
             </article>
-            <div className="w-full transition-all duration-500 ease-in-out transform">
+            <div className={`w-full transition-all duration-500 delay-1000
+                ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
                 {renderActiveSection()}
             </div>
         </section>

@@ -9,7 +9,7 @@ export const DownloadCV = ({ cvUrl }: {cvUrl: string}) => {
             href={cvUrl}
             className="flex items-center justify-center rounded-md gap-4 bg-blue-700 px-8 py-5 
                     shadow-lg cursor-pointer transition-all duration-300 
-                    hover:bg-white group"
+                    hover:bg-white group animate-fadeIn"
             download="Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
@@ -44,7 +44,9 @@ export default function HomeSect() {
                 </p>
                 <div className="flex items-center gap-8 mt-7">
                     <DownloadCV cvUrl="../doc/Resume_3 (1).pdf"/>
-                    <button className="flex items-center justify-center gap-3 group transition-all duration-300">
+                    <button 
+                        className="flex items-center justify-center gap-3 group transition-all duration-300 animate-fadeIn" 
+                        style={{ animationDelay: '0.8s' }}>
                         <FaRegCirclePlay className="text-blue-700 w-11 h-11 group-hover:text-white 
                                                 transition-colors duration-300" />
                         <h5 className="font-bold text-gray-500 group-hover:text-white 

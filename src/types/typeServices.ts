@@ -7,4 +7,5 @@ export type ServicesProps = {
         text: string;
         addText: string;
     }
+    index?: number;
 }

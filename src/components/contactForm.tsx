@@ -2,7 +2,7 @@ export default function ContactForm() {
     return (
         <form className="space-y-4">
             <div className="flex gap-20">
-                <div className="flex-1">
+                <div className="flex-1 form-element form-element-delay-1">
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
                         id="firstName"
@@ -13,7 +13,7 @@ export default function ContactForm() {
                         First Name
                     </label>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 form-element form-element-delay-1">
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
                         id="lastName"
@@ -26,7 +26,7 @@ export default function ContactForm() {
                 </div>
             </div>
             <div className="flex gap-20">
-                <div className="flex-1">
+                <div className="flex-1 form-element form-element-delay-2">
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
                         id="phone"
@@ -37,7 +37,7 @@ export default function ContactForm() {
                         Phone
                     </label>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 form-element form-element-delay-2">
                     <input
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black"
                         id="email"
@@ -50,7 +50,7 @@ export default function ContactForm() {
                 </div>
             </div>
             <div className="flex gap-20">
-                <div className="flex-1">
+                <div className="flex-1 form-element form-element-delay-3">
                     <select
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline bg-black"
                         id="service"
@@ -69,7 +69,7 @@ export default function ContactForm() {
                         Choose a Service
                     </label>
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 form-element form-element-delay-3">
                     <textarea
                         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-400 leading-tight focus:outline-none focus:shadow-outline bg-black"
                         id="message"
@@ -83,7 +83,7 @@ export default function ContactForm() {
             </div>
             <div className="flex items-center justify-between">
                 <button
-                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline form-element form-element-delay-4"
                     type="submit"
                 >
                     Send
